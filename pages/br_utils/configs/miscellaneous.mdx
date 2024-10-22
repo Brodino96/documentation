@@ -1,0 +1,39 @@
+---
+name: Miscellaneous
+---
+
+
+## debugMode
+Enables console prints for all the major actions that the script is enacting, useful if somehow something broke
+```lua filename="config.lua" showLineNumbers
+Config = {
+    debugMode = true
+}
+```
+- debugMode: `boolean`
+  - If the feature should be enabled
+
+
+## isStaff
+Settings for the [isStaff](exports/isStaff) export [[TODO]]
+```lua filename="config.lua" showLineNumbers
+isStaff = {
+    enable = true,
+    type = "playerAce",
+    values = {
+        ["playerAce"] = ace,
+        ["esxJob"] = job,
+        ["esxGroup"] = group,
+    }
+}
+```
+- enable: `boolean`
+  - If the feature should be enabled
+- type: `string`
+  - What type of action should be executed when calling the export (see values)
+- ace: `string`
+  - The player ace it should check for, check FiveM's [docs](https://docs.fivem.net/docs/server-manual/server-commands/#add_ace-principal-object-allowdeny) for more info
+- job: `string`
+  - The job name it should check for, check ESX's [documentation](https://documentation.esx-framework.org/legacy/Commands/setjob/) for more info
+- group: `string`
+  - The group name it should check for, check ESX's [documentation](https://documentation.esx-framework.org/legacy/Commands/setgroup/) for more info

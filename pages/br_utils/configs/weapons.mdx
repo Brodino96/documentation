@@ -1,0 +1,21 @@
+---
+title: Weapons
+---
+
+
+## overwriteDamage
+If enabled replaces the current weapon damage with the one defined in the Config
+```lua filename="config.lua" showLineNumbers
+overwriteDamage = {
+    enable = true,
+    values = {
+        [name] = damage,
+    }
+}
+```
+- enable: `boolean`
+  - If the features should be enabled
+- name: `string`
+  - The hash of the weapon ("WEAPON_PISTOL")
+- damage: `number`
+  - The new damage of the weapon
