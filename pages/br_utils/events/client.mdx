@@ -6,7 +6,7 @@ List of all the client events
 
 ## onPedChange
 An event that will be triggered anytime the `PlayerPedId()` of the current client changes
-```lua
+```lua showLineNumbers
 AddEventHandler("br_utils:onPedChange", function(playerPed)
     print(playerPed)
 end)
@@ -17,7 +17,7 @@ end)
 
 ## onVehicleChange
 An event that will be triggered anytime the player changes vehicle
-```lua
+```lua showLineNumbers
 AddEventHandler("br_utils:onVehicleChange", function(vehicle)
     print(vehicle)
 end)
@@ -25,3 +25,13 @@ end)
 - vehicle `integer`
   - The new entity handler for the vehicle
     - The value will be 0 if the ped left a vehicle
+
+
+## playerLoaded
+An internal event triggered when the current framework installed in the server considers the player as loaded
+```lua showLineNumbers
+AddEventHandler("br_utils:playerLoaded", function()
+    print("The player has loaded")
+end)
+```
+This event won't pass any variables
