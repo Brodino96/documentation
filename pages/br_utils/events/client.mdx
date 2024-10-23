@@ -1,0 +1,27 @@
+---
+title: "Client"
+---
+
+List of all the client events
+
+## onPedChange
+An event that will be triggered anytime the `PlayerPedId()` of the current client changes
+```lua
+AddEventHandler("br_utils:onPedChange", function(playerPed)
+    print(playerPed)
+end)
+```
+- playerPed `integer`
+  - The new `PlayerPedId()`
+
+
+## onVehicleChange
+An event that will be triggered anytime the player changes vehicle
+```lua
+AddEventHandler("br_utils:onVehicleChange", function(vehicle)
+    print(vehicle)
+end)
+```
+- vehicle `integer`
+  - The new entity handler for the vehicle
+    - The value will be 0 if the ped left a vehicle
