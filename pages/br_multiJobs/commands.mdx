@@ -1,0 +1,27 @@
+---
+title: Commands
+---
+
+## jobmanager
+Will open a menù to easily manage the jobs of all the online players
+```shell showLineNumbers
+/jobmanager
+```
+
+## setjob
+A command to directly set a player job  
+```shell showLineNumbers
+/setjob1 playerId job
+```
+- playerId: `integer`
+  - The server id of the player you want to set the job to
+- job: `string`
+  - The job id you want the target to have
+
+`IMPORTANT` the command will adjust based on the maximum number of jobs set in the config  
+If the config is set to 3 then you will have these commands
+```shell showLineNumbers
+/setjob1
+/setjob2
+/setjob3
+```

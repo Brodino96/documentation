@@ -1,0 +1,42 @@
+---
+title: Config
+---
+
+### maxJobs
+```lua filename="config.lua" showLineNumbers
+Config = {
+    maxJobs = 5
+}
+```
+- maxJobs: `number`
+  - The maximum number of jobs that one player is allowed to have
+
+
+### jobs
+```lua filename="config.lua" showLineNumbers
+Config = {
+    jobs = { "demo", "brodino", "coding" }
+}
+```
+- jobs: `table`
+  - An array containing all the allowed jobs
+
+
+### locale
+```lua filename="config.lua" showLineNumbers
+Config = {
+    locale = "it"
+}
+```
+- locale: `string`
+  - The language the script should use
+
+
+### debugMode
+```lua filename="config.lua" showLineNumbers
+Config = {
+    debugMode = false
+}
+```
+- debugMode: `boolean`
+  - Enables debug prints in console
