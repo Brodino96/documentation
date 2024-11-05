@@ -35,3 +35,13 @@ AddEventHandler("br_utils:playerLoaded", function()
 end)
 ```
 This event won't pass any variables
+
+
+## onPlayerDeath
+An event triggered whenever the player reaches 0 hp
+```lua showLineNumbers
+AddEventHandler("br_utils:onPlayerDeath", function()
+    print("The player died")
+end)
+```
+This event won't pass any variables
