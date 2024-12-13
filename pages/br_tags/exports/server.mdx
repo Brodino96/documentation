@@ -1,0 +1,34 @@
+---
+title: Server
+---
+
+## has
+Returns a `boolean` indicating if the specified player has that tag
+```lua showLineNumbers
+if exports["br_tags"]:has(id, tag) then
+    print("I have the tag")
+end
+```
+- id: `integer`
+    - The player's server id
+- tag: `string`
+    - Tag's name
+
+## add
+Adds a new tag 
+```lua showLineNumbers
+exports["br_tags"]:add(playerId, tag)
+```
+- id: `integer`
+    - The player's server id
+- tag: `string`
+    - Tag's name
+
+## remove
+```lua showLineNumbers
+exports["br_tags"]:remove(playerId, tag)
+```
+- id: `integer`
+    - The player's server id
+- tag: `string`
+    - Tag's name
