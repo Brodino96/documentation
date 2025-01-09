@@ -1,13 +1,14 @@
----
-title: Client
----
-
 ## has
-Returns a `boolean` indicating if the specified player has that tag
+Returns a `boolean` indicating if the current player has the stated tag
 ```lua showLineNumbers
-if exports["br_tags"]:has(tag) then
-    print("I have the tag")
-end
+exports["br_tags"]:has(tag)
 ```
 - tag: `string`
     - Tag's name
+
+Usage example:
+```lua showLineNumbers
+if exports["br_tags"]:has("racer") then
+    openRacingMenu()
+end
+```
