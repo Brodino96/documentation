@@ -1,20 +1,24 @@
+import { Button } from "@mui/material"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import ReleaseIcon from '@mui/icons-material/Sell'
+import { Steps, Callout, FileTree } from "nextra/components"
+
 # br_tags
 
+## Introduction
+
 TAG, you're it!  
-I hate using jobs to keep track of stuff, with this system you should be able to apply any tag to any player  
-the day of a single job per player are over, you can now give your users a limitless* number of tags
-You can only add and remove tags from the server so it should be pretty safe (unless you know something that i don't)
-#### Someday I will probably create a companion website that you can host on your server to easily manage all of your players tags (don't @me)
+Why does this resource exist? Why don't you go f*** yourself?  
+I'm not here to sell why you should use my script, just do what you want  
+All tags are saved inside the database in the `user` table
+### TODO
+Someday I will probably create a companion website that you can host on your server to easily manage all of your players tags (don't @me)
 
 Feel free to make any [suggestion](https://github.com/Brodino96/br_tags/issues) or any [modification](https://github.com/Brodino96/br_tags/pulls) you want
 
 **technically it's not limitless since you are bounded by the [limitations](https://www.atlassian.com/data/databases/understanding-strorage-sizes-for-mysql-text-data-types#:~:text=LONGTEXT%3A%204%2C294%2C967%2C295%20characters%20%2D%204%20GB) of SQL but good luck filling 4GB with a single string*
 
 ***
-
-import { Button } from "@mui/material"
-import GitHubIcon from "@mui/icons-material/GitHub"
-import ReleaseIcon from '@mui/icons-material/Sell'
 
 <Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/Brodino96/br_tags") }} > 
   GitHub
@@ -26,9 +30,27 @@ import ReleaseIcon from '@mui/icons-material/Sell'
 
 ***
 
-## Installation
+<FileTree>
+  <FileTree.Folder name="client">
+    <FileTree.File name="main.lua" />
+    <FileTree.File name="nui.lua" />
+  </FileTree.Folder>
+  <FileTree.Folder name="server">
+    <FileTree.File name="database.lua" />
+    <FileTree.File name="main.lua" />
+    <FileTree.File name="menu.lua" />
+  </FileTree.Folder>
+    <FileTree.Folder name="web">
+    <FileTree.File name="index.html" />
+    <FileTree.File name="script.js" />
+    <FileTree.File name="style.css" />
+  </FileTree.Folder>
+  <FileTree.File name="config.lua" />
+  <FileTree.File name="database.sql" />
+  <FileTree.File name="fxmanifest.lua                        " />
+</FileTree>
 
-import { Steps } from "nextra/components"
+## Installation
 
 <Steps>
 ### Download a [release](https://github.com/Brodino96/br_tags/releases/latest) or clone the repository
@@ -36,12 +58,12 @@ import { Steps } from "nextra/components"
 git clone https://github.com/Brodino96/br_tags
 ```
 
-### Configure your database using the file `database.sql`
+### Prepare database using the file `database.sql`
+<Callout type="error" emoji="️🚫">
+  The script won't work if you miss this step
+</Callout>
 
-### Add this line to your `server.cfg` to start the script
-```shell filename="server.cfg" showLineNumbers
-start br_tags
-```
+### Update the configs using the file `config.lua`
 
 ### Enjoy!
 </Steps>
