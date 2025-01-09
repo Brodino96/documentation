@@ -1,0 +1,28 @@
+# Config
+
+Default options:
+```lua showLineNumbers
+Config = {
+    allowedTags = { "user", "admin", "brodino" },
+    keepRemovedTags = false,
+    defaultTag = "user",
+    menu = {
+        command = "tagsmenu",
+        tag = "user"
+    },
+}
+```
+### allowedTags
+Holds all the tags that are considered "allowed", `add` export won't be able to add a tag that isn't stated in this table
+***
+### keepRemovedTags
+Specifies if the script should keep tags that have already been assigned to a player but are not present in `allowedTags` anymore
+***
+### defaultTag
+A tag that will be given on every player that connects to the server
+***
+### menu
+- command
+    - The command you have to type in chat/console to open the "manager's" menu
+- tag
+    - The required tag to be able to open the menu

@@ -1,0 +1,31 @@
+# Interface
+
+By using the command configured in the `config.lua` and having the correct tag you'll have access to the managerial
+interface of br_tags
+
+This interface is divided in two sides
+- Left: View the list of users with a search bar
+- Right: Shows the informations about the selected user and the list of assignable tags
+
+## Left side
+### Players search bar
+- When opening the ui, only users who are currently online are shown  
+- Typing in the search bar displays all users who match the serch criteria, regardless of their online/offline status  
+- If you perform a search without entering any terms, the list returns to showing only online users
+### User list
+- View available users with basic informations (first and last name)
+
+## Right side
+### Informations
+- At the top of the right section, the following details of the selected user are displayed:
+    - Name
+    - Group
+    - Identifier
+### Tags search bar
+- Let's you filter the list of assignable tags
+### Tags list
+- Shows all the tags
+    - Blue Checkmark
+        - User owns this tag
+    - Empty Square
+        - User does not own this tag
