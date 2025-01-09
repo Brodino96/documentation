@@ -1,34 +1,47 @@
----
-title: Server
----
+## Overview
+
+All the exports have these 3 variables in common:
+- `serverId`: integer | nil
+- `tag`: string
+- `identifier`: string | nil
+
+You can either use the `serverId` or the `identifier`, you just need one of them  
+If the identifier is present then it will ignore the serverId
 
 ## has
-Returns a `boolean` indicating if the specified player has that tag
+Returns a `boolean` indicating if the specified player has the stated tag
 ```lua showLineNumbers
-if exports["br_tags"]:has(id, tag) then
-    print("I have the tag")
+exports["br_tags"]:has(playerId, tag, identifier)
+```
+Usage example:
+```lua showLineNumbers
+if not exports["br_tags"]:has(id, "attorney") then
+    return print("Cannot access documents")
 end
 ```
-- id: `integer`
-    - The player's server id
-- tag: `string`
-    - Tag's name
 
 ## add
-Adds a new tag 
+Adds a new tag to the specified player  
 ```lua showLineNumbers
-exports["br_tags"]:add(playerId, tag)
+exports["br_tags"]:add(playerId, tag, identifier)
 ```
-- id: `integer`
-    - The player's server id
-- tag: `string`
-    - Tag's name
+Usage example:
+```lua showLineNumbers
+AddEventHandler("buyProperty", function(cash)
+    if cash >= Config.propertyPrice then
+        exports["br_tags"]:add(source, "420_house_owner")
+    end
+end)
+```
 
 ## remove
+Removes the stated tag from the specified player
 ```lua showLineNumbers
-exports["br_tags"]:remove(playerId, tag)
+exports["br_tags"]:remove(playerId, tag, identifier)
 ```
-- id: `integer`
-    - The player's server id
-- tag: `string`
-    - Tag's name
+Usage example:
+```lua showLineNumbers
+AddEventHandler("committedCrime", function()
+    exports["br_tags"]:add(nil, "cop", xPlayer.getIdentifier())
+end)
+```
