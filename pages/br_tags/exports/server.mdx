@@ -1,17 +1,13 @@
 ## Overview
 
-All the exports have these 3 variables in common:
-- `serverId`: integer | nil
+All the server exports have these 2 variables in common:
+- `serverId`: integer
 - `tag`: string
-- `identifier`: string | nil
-
-You can either use the `serverId` or the `identifier`, you just need one of them  
-If the identifier is present then it will ignore the serverId
 
 ## has
 Returns a `boolean` indicating if the specified player has the stated tag
 ```lua showLineNumbers
-exports["br_tags"]:has(playerId, tag, identifier)
+exports["br_tags"]:has(playerId, tag)
 ```
 Usage example:
 ```lua showLineNumbers
@@ -23,7 +19,7 @@ end
 ## add
 Adds a new tag to the specified player  
 ```lua showLineNumbers
-exports["br_tags"]:add(playerId, tag, identifier)
+exports["br_tags"]:add(playerId, tag)
 ```
 Usage example:
 ```lua showLineNumbers
@@ -37,11 +33,11 @@ end)
 ## remove
 Removes the stated tag from the specified player
 ```lua showLineNumbers
-exports["br_tags"]:remove(playerId, tag, identifier)
+exports["br_tags"]:remove(playerId, tag)
 ```
 Usage example:
 ```lua showLineNumbers
 AddEventHandler("committedCrime", function()
-    exports["br_tags"]:add(nil, "cop", xPlayer.getIdentifier())
+    exports["br_tags"]:add(source, "cop")
 end)
 ```
