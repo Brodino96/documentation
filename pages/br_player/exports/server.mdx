@@ -1,0 +1,39 @@
+## play
+Plays the given audio on the specified client
+```lua showLineNumbers
+exports["br_player"]:play(file, volume, serverId)
+```
+- file: `string`
+- volume: `number`
+- serverId: `string` or `number`
+
+## everyone
+Plays the given audio for all the players connected to the server
+```lua showLineNumbers
+exports["br_player"]:everyone(file, volume)
+```
+- file: `string`
+- volume: `number`
+
+## range
+Plays the given audio for all the players within the specified range (the volume will decrese the farthest you go from the origin)
+```lua showLineNumbers
+exports["br_player"]:range(file, volume, coords, range)
+```
+- file: `string`
+- volume: `number`
+- coords: `vector3`
+- range: `number`
+
+## stop
+Stops the current audio for the specified player
+```lua showLineNumbers
+exports["br_player"]:stop(serverId)
+```
+- serverId: `string` or `number`
+
+## stopEveryone
+Stops the current audio for all the players connected to the server
+```lua showLineNumbers
+exports["br_player"]:stopEveryone()
+```

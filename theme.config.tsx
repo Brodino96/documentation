@@ -9,6 +9,9 @@ const config: DocsThemeConfig = {
   chat: {
     link: 'https://discord.com',
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 0
+  },
   docsRepositoryBase: "https://github.com/Brodino96/documentation/tree/main",
   footer: {
     text: "Brodino",

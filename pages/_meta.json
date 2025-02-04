@@ -1,6 +1,7 @@
 {
     "index": "Introduction",
     "br_tags": "br_tags",
+    "br_player": "br_player",
     "br_utils": "br_utils",
     "br_multiJobs": "br_multiJobs"
 }
