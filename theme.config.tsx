@@ -10,7 +10,7 @@ const config: DocsThemeConfig = {
     link: 'https://discord.com',
   },
   sidebar: {
-    defaultMenuCollapseLevel: 0
+    defaultMenuCollapseLevel: 1
   },
   docsRepositoryBase: "https://github.com/Brodino96/documentation/tree/main",
   footer: {
