@@ -4,7 +4,10 @@ Plays the given audio on the specified client
 exports["br_player"]:play(file, volume, serverId)
 ```
 - file: `string`
+    - The audio file name, example: `demo.ogg`
 - volume: `number`
+    - A number between 0.0 and 1.0
+    - Defaults to `0.5`
 - serverId: `string` or `number`
 
 ## everyone
@@ -13,7 +16,10 @@ Plays the given audio for all the players connected to the server
 exports["br_player"]:everyone(file, volume)
 ```
 - file: `string`
+    - The audio file name, example: `demo.ogg`
 - volume: `number`
+    - A number between 0.0 and 1.0
+    - Defaults to `0.5`
 
 ## range
 Plays the given audio for all the players within the specified range (the volume will decrese the farthest you go from the origin)
@@ -21,9 +27,14 @@ Plays the given audio for all the players within the specified range (the volume
 exports["br_player"]:range(file, volume, coords, range)
 ```
 - file: `string`
+    - The audio file name, example: `demo.ogg`
 - volume: `number`
+    - A number between 0.0 and 1.0
+    - Defaults to `0.5`
 - coords: `vector3`
+    - The origin coords for the sound
 - range: `number`
+    - The maximum distance at which the sound will be heard
 
 ## stop
 Stops the current audio for the specified player

@@ -4,7 +4,10 @@ Plays the given audio
 exports["br_player"]:play(file, volume)
 ```
 - file: `string`
+    - The audio file name, example: `demo.ogg`
 - volume: `number`
+    - A number between 0.0 and 1.0
+    - Defaults to `0.5`
 
 ## range
 Plays the fiven audio in the specified range (only for the same client)
@@ -12,9 +15,14 @@ Plays the fiven audio in the specified range (only for the same client)
 exports["br_player"]:range(file, volume, coords, range)
 ```
 - file: `string`
+    - The audio file name, example: `demo.ogg`
 - volume: `number`
+    - A number between 0.0 and 1.0
+    - Defaults to `0.5`
 - coords: `vector3`
+    - The origin coords for the sound
 - range: `number`
+    - The maximum distance at which the sound will be heard
 
 ## stop
 Stops the current audio
