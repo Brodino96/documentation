@@ -1,13 +1,13 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react"
+import { DocsThemeConfig } from "nextra-theme-docs"
 
 const config: DocsThemeConfig = {
-  logo: <span>Brodino's Documentation</span>,
+  logo: <span>Brodino</span>,
   project: {
     link: "https://github.com/Brodino96/documentation",
   },
   chat: {
-    link: 'https://discord.com',
+    link: "https://discord.com",
   },
   sidebar: {
     defaultMenuCollapseLevel: 1
