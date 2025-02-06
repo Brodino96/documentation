@@ -1,30 +1,58 @@
+import { Button } from "@mui/material"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import ReleaseIcon from "@mui/icons-material/Sell"
+import { Steps, Callout, FileTree } from "nextra/components"
+
 # br_utils
-
-This resource is a utility package made for FiveM  
-Every features was made by my usemind in focus so it's possible that not everything will be suited for you  
-The script is fully configurable and open source so you'll be able to pick and choose what you'll need on your server
-
-Feel free to make any [suggestion](https://github.com/Brodino96/br_utils/issues) or any [modification](https://github.com/Brodino96/br_utils/pulls) you want
 
 ***
 
-import { Button } from "@mui/material"
-import GitHubIcon from "@mui/icons-material/GitHub"
-import ReleaseIcon from '@mui/icons-material/Sell'
-
 <Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/Brodino96/br_utils") }} > 
-  GitHub
+  Repo
 </Button>
 
 <Button variant="outlined" color="" endIcon={<ReleaseIcon />} onClick={() => { open("https://github.com/Brodino96/br_utils/releases") }} > 
   Release
 </Button>
 
+**A utility package with usefull events**
+
 ***
 
-## Installation
+<FileTree>
+  <FileTree.Folder name="client">
+    <FileTree.Folder name="modules">
+      <FileTree.File name="airTurbulence.lua" />
+      <FileTree.File name="autoHelmet.lua" />
+      <FileTree.File name="idleCamera.lua" />
+      <FileTree.File name="onPedChange.lua" />
+      <FileTree.File name="onPlayerDeath.lua" />
+      <FileTree.File name="onVehicleChange.lua" />
+      <FileTree.File name="playerAttributes.lua" />
+      <FileTree.File name="playerLoaded.lua" />
+      <FileTree.File name="weaponDamage.lua" />
+    </FileTree.Folder>
+    <FileTree.File name="main.lua" />
+  </FileTree.Folder>
 
-import { Steps } from "nextra/components"
+  <FileTree.Folder name="server">
+    <FileTree.Folder name="modules">
+      <FileTree.File name="isStaff.lua" />
+    </FileTree.Folder>
+    <FileTree.File name="main.lua" />
+    <FileTree.File name="versionCheck.lua" />
+  </FileTree.Folder>
+
+  <FileTree.Folder name="shared">
+    <FileTree.File name="debug.lua" />
+    <FileTree.File name="framework.lua" />
+  </FileTree.Folder>
+  <FileTree.File name="config.lua" />
+  <FileTree.File name="fxmanifest.lua                        " />
+</FileTree>
+
+
+## Installation
 
 <Steps>
 ### Download a [release](https://github.com/Brodino96/br_utils/releases/latest) or clone the repository
@@ -34,18 +62,10 @@ git clone https://github.com/Brodino96/br_utils.git
 
 ### Configure the script using the file `config.lua`
 
-### Add this line to your `server.cfg` to start the script
-```shell filename="server.cfg" showLineNumbers
-start br_utils
-```
-
-### Enjoy!
 </Steps>
 
-### Supported frameworks
-
-***
-
+## Supported frameworks
+<br></br>
 <Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/esx-framework/esx_core") }} > 
   esx
 </Button>
@@ -58,4 +78,4 @@ start br_utils
   qbcore
 </Button>
 
-You must use one of these framework or most features won't work
+You must use one of these framework or some features won't work
