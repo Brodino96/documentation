@@ -1,0 +1,23 @@
+# Config
+
+Default options:
+```json showLineNumbers
+{
+    "debugMode": true,
+    "locale": "en",
+    "permissions": {
+        "type": "esx",
+        "value": "admin"
+    }
+}
+```
+- debugMode: `bool`
+    - If the script should print all the actions in client and server console
+- locale: `string`
+    - The name of the file that should be picked up for translations `en = locales/en.json`
+- permissions: `object` (`table`)
+    - type: `string`
+        - `esx`: Checks if the group matches the value
+        - `ace`: Runs the native `IsPlayerAceAllowed` with the value
+    - value: `string`
+        - Value the be used by the type function

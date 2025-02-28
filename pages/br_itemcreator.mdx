@@ -1,0 +1,64 @@
+import { Button } from "@mui/material"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import ReleaseIcon from "@mui/icons-material/Sell"
+import { Steps, Callout, FileTree } from "nextra/components"
+
+# br_itemcreator
+
+***
+
+<Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/Brodino96/br_itemcreator") }} > 
+    Repo
+</Button>
+
+<Button variant="outlined" color="" endIcon={<ReleaseIcon />} onClick={() => { open("https://github.com/Brodino96/br_itemcreator/releases") }} > 
+    Release
+</Button>
+
+**An in-game live item creator for ox_inventory**
+
+
+<FileTree>
+    <FileTree.Folder name="dist">
+        <FileTree.File name="client.js" />
+        <FileTree.File name="server.js" />
+    </FileTree.Folder>
+
+    <FileTree.Folder name="locales">
+        <FileTree.File name="en.json" />
+        <FileTree.File name="it.json" />
+    </FileTree.Folder>
+
+    <FileTree.File name="config.json" />
+    <FileTree.File name="fxmanifest.lua                        " />
+</FileTree>
+
+***
+
+# Installation
+
+<Steps>
+### Download a [release](https://github.com/Brodino96/br_itemcreator/releases/latest) or build it yourself
+```shell filename="console" showLineNumbers
+git clone https://github.com/Brodino96/br_itemcreator
+cd br_itemcreator
+bun install
+bun run prod
+```
+
+You can optionally run `./release.ps1` (if on windows) to generate a folder with every file in the right place
+
+### Update the [configs](https://docs.brodino.net/br_itemcreator/config) using the file `config.json`
+</Steps>
+
+## Dependencies
+<br/><br/>
+<Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/overextended/ox_inventory") }} > 
+  ox_inventory
+</Button>
+
+<Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/overextended/ox_lib") }} > 
+  ox_lib
+</Button>
+
+You must have these scripts or you won't be able to use this system
