@@ -1,0 +1,48 @@
+import { Button } from "@mui/material"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import ReleaseIcon from "@mui/icons-material/Sell"
+import { Steps, Callout } from "nextra/components"
+
+# RoleplaySimpleVoicechat
+
+***
+
+<Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/Brodino96/RoleplaySimpleVoicechat") }} > 
+    Repo
+</Button>
+
+<Button variant="outlined" color="" endIcon={<ReleaseIcon />} onClick={() => { open("https://github.com/Brodino96/RoleplaySimpleVoicechat/releases") }} > 
+    Releases
+</Button>
+
+Roleplay Simple Voicechat is an addon that expands the functionality of Simple Voice Chat,
+with features designed specifically for roleplaay servers. Whether you are running a medieval kingdom,
+a modern city, or a post-apocalyptic world, this addon will help with character interactions.
+
+***
+
+## Installation
+
+<Steps>
+### Download
+
+**You can simply download a [release](https://github.com/Brodino96/RoleplaySimpleVoicechat/releases/) or you can build it yourself from scratch**
+```sh
+git clone https://github.com/Brodino96/RoleplaySimpleVoicechat
+cd RoleplaySimpleVoicechat
+./gradlew build
+# ./gradlew.bat if you are on windows
+```
+
+### Configuration 
+
+**Update the config file**
+- Path: `config/roleplaysimplevoicechat/config.json`
+
+</Steps>
+
+## Dependencies
+<br/><br/>
+<Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/henkelmax/simple-voice-chat") }} > 
+  SimpleVoiceChat
+</Button>
