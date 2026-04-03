@@ -1,0 +1,43 @@
+import { Button } from "@mui/material"
+import GitHubIcon from "@mui/icons-material/GitHub"
+import ReleaseIcon from "@mui/icons-material/Sell"
+import { Steps, Callout } from "nextra/components"
+
+# EverLoad
+
+***
+
+<Button variant="outlined" color="" endIcon={<GitHubIcon />} onClick={() => { open("https://github.com/Brodino96/EverLoad") }} > 
+    Repo
+</Button>
+
+<Button variant="outlined" color="" endIcon={<ReleaseIcon />} onClick={() => { open("https://github.com/Brodino96/EverLoad/releases") }} > 
+    Releases
+</Button>
+
+A simple mod that automatically syncs files from a Git repository to your Minecraft instance directory.  
+Best used in concomitance with mods such as [KubeJS](https://github.com/KubeJS-Mods/KubeJS/tree/1902) to load scripts and datapacks before client initialization
+
+***
+
+## Installation
+
+<Steps>
+### Download
+
+**You can download a release from [curseforge](https://www.curseforge.com/minecraft/mc-mods/everload/files/) or you can
+build it yourself from scratch**
+```sh
+# Gradle is required
+git clone https://github.com/Brodino96/EverLoad
+cd EverLoad
+./gradlew build
+# .\gradlew.bat if you are on windows
+```
+
+### Configuration 
+
+**Update the config file**
+- Path: `config/everload.json`
+
+</Steps>
